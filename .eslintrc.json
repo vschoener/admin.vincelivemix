@@ -1,0 +1,55 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "rules": {
+    "import/extensions": 0,
+    "import/prefer-default-export": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "react/jsx-props-no-spreading": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/anchor-has-content": 0,
+    "react/jsx-one-expression-per-line": [1, { "allow": "single-child" }],
+    // https://github.com/immerjs/immer/issues/189#issuecomment-506396244
+    // As it warns mutating dom element and no other choice...
+    "no-param-reassign": 0,
+    // TS rule youu beaches ;)
+    "react/prop-types": 0
+  }
+}
