@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Head from 'next/head';
 import { BaseLayout } from '../components/layout/base.layout';
 
-export default function Home() {
+export default function Home(): ReactElement {
   return (
     <BaseLayout>
       <Head>
         <title>Home</title>
       </Head>
-      <div className="container">Test</div>
+      <div>Test</div>
     </BaseLayout>
   );
 }
