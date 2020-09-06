@@ -26,6 +26,9 @@ module.exports = {
     backend: {
       url: process.env.BACKEND_URL || 'http://localhost:3000',
     },
+    authentication: {
+      url: process.env.AUTHENTICATION_URL || 'http://localhost:3002',
+    },
   },
   publicRuntimeConfig: {
     env: process.env.NODE_ENV || 'development',
