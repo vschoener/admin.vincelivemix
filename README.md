@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
+## Configuration
+
+Environment variable use the new next system with `.env` file. So we provide a `.env.development` that is loaded when runing `npm run dev`. Otherwise, if you need to override the values, create a `.env.local` and set all the variables there.
+
+We still use the `next.config.js` to set default variable in case env variables are missing.
+
 ## Getting Started
 
 First, run the development server:
