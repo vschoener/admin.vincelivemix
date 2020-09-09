@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { theme } from '../themes/default';
 import { GlobalStyle } from '../themes/global';
+import { AuthProvider } from '../providers/auth.provider';
 
 export type AppProps = Record<string, unknown> & AppInitialProps;
 
@@ -18,10 +19,12 @@ export default function App({
 }): ReactElement {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <AuthProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </AuthProvider>
     </>
   );
 }

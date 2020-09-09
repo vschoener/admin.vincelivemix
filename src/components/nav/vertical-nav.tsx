@@ -1,11 +1,12 @@
 import React, { ReactElement } from 'react';
+import Link from 'next/link';
 
 export function VerticalNav(): ReactElement {
   return (
     <nav className="nav flex-column">
-      <a className="nav-link active" href="#">
-        Active
-      </a>
+      <Link href="/test">
+        <a className="nav-link active">Test</a>
+      </Link>
       <a className="nav-link" href="#">
         Link
       </a>
