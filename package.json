@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "bootstrap": "^4.4.1",
-    "cookie": "^0.4.1",
+    "cookie": "^0.7.0",
     "http-status-codes": "^2.1.2",
     "next": "9.5.4",
     "react": "17.0.1",
